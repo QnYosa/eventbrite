@@ -1,0 +1,8 @@
+<h1> <%= Event.find(params[:id]).title %> </h1><br/>
+
+<p> Début: <%= Event.find(params[:id]).start_date %> <br/>
+    Durée: <%= Event.find(params[:id]).duration %> <br/>
+    Description: <%= Event.find(params[:id]).description %> <br/>
+    Prix: <%= Event.find(params[:id]).price %> <br/>
+    Localisation: <%= Event.find(params[:id]).location %> <br/>
+</p>

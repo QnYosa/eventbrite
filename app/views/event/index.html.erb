@@ -1,0 +1,20 @@
+<h1>Привет, Добро Пожаловать</h1>
+<h3>Voici la liste de nos events</h3>
+
+<h6>Tu veux créer ton event appuies ici <a class="btn btn-secondary" <%= link_to "Creer event", new_event_path %>></h6>
+
+<div class="ol-sm-4 mb-3">
+<% @events.each do |event|%>
+<div class="card">
+<div class="card-body">
+      <h2 class="card-title"> Nom de l'event:  <%=  event.title  %> </h2>
+        <p class="card-text"> Début:  <%= event.start_date %> </p>
+        <p class="card-text"> Durée: <%= event.duration %> </p>
+         <p lass="card-text"> Description:<%= event.description %> </p>
+          <p lass="card-text"> Prix: <%= event.price %>€ </p>
+           <p lass="card-text"> Localisation: <%= event.location %> </p>
+            <p><a class="btn btn-secondary" <%= link_to "Voir l'évènement", event_path(event.id)%></a></p>
+      </div>
+    </div>
+  </div>
+<% end %>
